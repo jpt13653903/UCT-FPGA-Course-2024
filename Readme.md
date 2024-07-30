@@ -6,7 +6,7 @@ presented at UCT.
 - EEE5132Z: 9 to 13 September 2024
 - UCT campus, Room 6.08, 6th Floor, Menzies Building
 - Presented by John-Philip Taylor
-- 3 CPD points, ECSA course code: UCTREDFBS22
+- 5 CPD points, ECSA course code: UCTREDFBS22
 
 Refer to [the course handout](Reference%20Material/Course%20Handout.pdf) for more information.
 
