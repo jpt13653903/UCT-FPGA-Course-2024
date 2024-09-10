@@ -255,7 +255,7 @@ all the lines above come from.
 
 ## Create a test circuit
 
-No that you have your SDRAM hooked up, you need something to test it.
+Now that you have your SDRAM hooked up, you need something to test it.
 So add a test circuit:
 
 ```systemverilog
