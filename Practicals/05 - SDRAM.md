@@ -226,8 +226,11 @@ Use the datasheet to figure out the timing requirements:
 create_generated_clock -source [get_pins { SDRAM_PLL_Inst|altpll_component|auto_generated|pll1|clk[1] } ] \
                        -name opClk_SDRAM [get_ports opClk_SDRAM]
 
+# Page 19 in the datasheet
+
 # Suppose +- 100 ps skew
-# Board Delay (Data) + Propagation Delay - Board Delay (Clock)
+# max: t_AC (External Device) + Board Delay (Clock) + Board Delay (Data)
+# min: t_OH (External Device) + Board Delay (Clock) + Board Delay (Data)
 # max 5.4(max) +0.4(trace delay) +0.1 = 5.9
 # min 2.7(min) +0.4(trace delay) -0.1 = 3.0
 
@@ -241,8 +244,8 @@ set_multicycle_path -from [get_clocks opClk_SDRAM] \
                     -setup 2
 
 # Suppose +- 100 ps skew
-# max : Board Delay (Data) - Board Delay (Clock) + tsu (External Device)
-# min : Board Delay (Data) - Board Delay (Clock) - th (External Device)
+# max : Board Delay (Data) - Board Delay (Clock) + t_DS (External Device)
+# min : Board Delay (Data) - Board Delay (Clock) - t_DH (External Device)
 # max  1.5 +0.1 =  1.6
 # min -0.8 -0.1 = -0.9
 
